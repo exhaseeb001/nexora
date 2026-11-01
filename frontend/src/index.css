@@ -63,3 +63,16 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---- NEXORA animated mascot logo ---- */
+.nx-bob, .nx-bob2, .nx-float { transform-box: fill-box; transform-origin: center; }
+.nx-blink { transform-box: fill-box; transform-origin: center; }
+.nx-wave { transform-box: fill-box; transform-origin: 30% 15%; }
+.nx-bob { animation: nx-bob 2.6s ease-in-out infinite; }
+.nx-bob2 { animation: nx-bob 3.2s ease-in-out infinite; animation-delay: -1.4s; }
+.nx-float { animation: nx-bob 3.8s ease-in-out infinite; animation-delay: -0.7s; }
+.nx-blink { animation: nx-blink 4.4s ease-in-out infinite; }
+.nx-wave { animation: nx-wave 1.6s ease-in-out infinite; }
+@keyframes nx-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes nx-blink { 0%, 91%, 100% { transform: scaleY(1); } 94%, 97% { transform: scaleY(0.08); } }
+@keyframes nx-wave { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(40deg); } }
