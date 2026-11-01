@@ -73,6 +73,19 @@
 .nx-float { animation: nx-bob 3.8s ease-in-out infinite; animation-delay: -0.7s; }
 .nx-blink { animation: nx-blink 4.4s ease-in-out infinite; }
 .nx-wave { animation: nx-wave 1.6s ease-in-out infinite; }
+/* mascot journeys: penguin hops to the upper leg, panda to the lower leg (12s loop) */
+.nx-jp { animation: nx-pg-journey 12s ease-in-out infinite; }
+.nx-jd { animation: nx-pd-journey 12s ease-in-out infinite; }
 @keyframes nx-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 @keyframes nx-blink { 0%, 91%, 100% { transform: scaleY(1); } 94%, 97% { transform: scaleY(0.08); } }
 @keyframes nx-wave { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(40deg); } }
+@keyframes nx-pg-journey {
+  0%, 15% { transform: translate(0, 0); }
+  22% { transform: translate(-26px, -44px); }
+  32%, 100% { transform: translate(-52px, -44px); }
+}
+@keyframes nx-pd-journey {
+  0%, 40% { transform: translate(0, 0); }
+  47% { transform: translate(26px, -22px); }
+  57%, 100% { transform: translate(52px, -6px); }
+}
