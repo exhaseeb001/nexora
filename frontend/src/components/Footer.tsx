@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
 
 const columns = [
   {
@@ -22,10 +23,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1fr_2fr]">
           <div>
             <Link to="/" className="flex items-center gap-2">
-              <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-lg font-extrabold text-primary-foreground">
-                N
-              </span>
-              <span className="text-xl font-extrabold tracking-tight">NEXORA</span>
+              <Logo />
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
               Realtime analytics for teams that ship. Understand growth, act faster.

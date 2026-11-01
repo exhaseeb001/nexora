@@ -1,6 +1,7 @@
 import { LayoutDashboard, Users, BarChart3, Settings, X } from "lucide-react";
 import { cn } from "../lib/utils";
 import { Button } from "./ui/button";
+import { Logo } from "./Logo";
 
 export type DashboardView = "overview" | "customers" | "reports" | "settings";
 
@@ -25,12 +26,7 @@ export function Sidebar({
   const content = (
     <div className="flex h-full flex-col">
       <div className="flex h-16 items-center justify-between border-b border-border px-5">
-        <span className="flex items-center gap-2">
-          <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-lg font-extrabold text-primary-foreground">
-            N
-          </span>
-          <span className="text-lg font-extrabold tracking-tight">NEXORA</span>
-        </span>
+        <Logo wordmarkClassName="text-lg" />
         <Button variant="ghost" size="icon" className="lg:hidden" onClick={onClose} aria-label="Close sidebar">
           <X className="size-5" />
         </Button>

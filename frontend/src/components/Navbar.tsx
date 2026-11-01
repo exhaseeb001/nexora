@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import { Logo } from "./Logo";
 import { cn } from "../lib/utils";
 
 const links = [
@@ -37,10 +38,7 @@ export function Navbar() {
         aria-label="Main navigation"
       >
         <Link to="/" className="flex items-center gap-2" aria-label="Nexora home">
-          <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-lg font-extrabold text-primary-foreground">
-            N
-          </span>
-          <span className="text-xl font-extrabold tracking-tight">NEXORA</span>
+          <Logo />
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">
